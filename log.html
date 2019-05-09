@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" language="javascript">
+        function checklog()
+        {
+            var f = document.forms["log"].elements;
+            var cansubmit = true;
+
+            for (var i = 0; i < f.length; i++) {
+                if (f[i].value.length == 0) cansubmit = false;
+            }
+
+            if (cansubmit) {
+                document.getElementById('loguser_submit').disabled = false;
+            }
+        }
+    </script> 
+</head>
+<body>
+    <h1> Login Page</h1>
+    <div id="login">
+        <form action="" name="log">
+            
+            <label for="">Email:</label>
+            <input type="email" name="" id="useremail"  onKeyup="checklog()"><br>
+            <label for="">MOBILE:</label>
+            <input type="text" name="mobile" pattern="[1-9]{1}[0-9]{9}" title="Enter 10 digit mobile number" placeholder="Mobile number"  onKeyup="checklog()" required><br>
+            <div id="but">
+
+                <a href="./depositdetails.html"><input type="button" id="loguser_submit" value="Submit"disabled="disabled" ></a>
+                <input type="button" id="loguser_cancle" value="Cancle" >
+            </div>
+           
+        </form>
+       
+    </div>
+    
+</body>
+</html>

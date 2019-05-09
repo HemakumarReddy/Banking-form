@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" language="javascript">
+        function depositform()
+        {
+		alert('pdfs');
+            var f = document.forms["depositelog"].elements;
+            var cansubmit = true;
+
+            for (var i = 0; i < f.length; i++) {
+                if (f[i].value.length == 0) cansubmit = false;
+            }
+
+            if (cansubmit) {
+                document.getElementById('deposit_submit').disabled = false;
+            }
+        }
+    </script> 
+</head>
+<body>
+    <h1>Deposit Details Amount</h1>
+    <div id="login">
+        <form action="" name="depositelog">
+            
+            <label for="">Deposit Amount:</label>
+            <input type="text" name="" id="depositeamount"  onKeyup="depositform()"><br>
+            <label for="">Rate of Interest:</label>
+            <input type="text" name="" id="roi" onKeyup="depositform()" ><br>
+            <label for="">Terms</label>
+            <!--<input type="text" name="" id="terms" onKeyup="depositform()" ><br>-->
+            <select name="" id="terms" onkeyup="depositform()">
+                <option value="">Terms</option>
+                <option value="">3</option>
+                <option value="">6</option>
+                <option value="">9</option>
+                <option value="">12</option>
+            </select>
+            <div id="but">
+
+                <input type="button" id="deposit_submit" value="Submit"disabled="disabled" >
+                <input type="button" id="deposit_cancle" value="Cancle" >
+            </div>
+           
+        </form>
+       
+    </div>
+    
+</body>
+</html>

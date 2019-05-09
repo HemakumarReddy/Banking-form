@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" language="javascript">
+        function checkform()
+        {
+            var f = document.forms["user_log"].elements;
+            var cansubmit = true;
+
+            for (var i = 0; i < f.length; i++) {
+                if (f[i].value.length == 0) cansubmit = false;
+            }
+
+            if (cansubmit) {
+                document.getElementById('user_submit').disabled = false;
+            }
+        }
+		function callMe(){
+			alert('hi');
+		}
+    </script> 
+</head>
+<body>
+    <h1>USER Login Page</h1>
+    <div id="login">
+        <form action="" name="user_log">
+            
+            <label for="">USER NAME:</label>
+            <input type="text" name="" id="username"  value="hema.reddy@gmail.com" onKeyup="checkform();callMe()"><br>
+            <label for="">PASSWORD:</label>
+            <input type="password" name="" id="userpassword" onKeyup="checkform()" ><br>
+            <div id="but">
+                <a href="./log.html"><input type="button" id="user_submit" value="Submit"disabled="disabled" ></a>
+                <input type="button" id="user_cancle" value="Cancle" >
+            </div>
+           
+        </form>
+       
+    </div>
+    
+</body>
+</html>

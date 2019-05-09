@@ -1,0 +1,26 @@
+body{
+    width: 450px;
+    margin-left: 440px;
+}
+h1
+{
+    text-align: center;
+}
+#login{
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 50px;
+
+}
+#login input{
+    width: 210px;
+    line-height: 25px;
+}
+#but{
+   
+    margin-left: 70px;    
+}
+#user_cancle{
+    margin-left: 30px;
+}
